@@ -5,4 +5,9 @@
     <string name="edit_text_id">id</string>
     <string name="button_add_user">add</string>
     <string name="edit_text_age">age</string>
+    <string name="button_add_several">add several</string>
+    <string name="button_remove">remove</string>
+    <string name="button_upgrade">upgrade</string>
+    <string name="button_get_user">get user</string>
+    <string name="button_clean">clean</string>
 </resources>
