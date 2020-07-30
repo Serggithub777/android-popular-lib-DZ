@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AppDZ</string>
+    <string name="edit_text_name">name</string>
+    <string name="edit_text_surname">surname</string>
+    <string name="edit_text_id">id</string>
+    <string name="button_add_user">add</string>
+    <string name="edit_text_age">age</string>
 </resources>
