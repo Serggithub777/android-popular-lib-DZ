@@ -1,16 +1,22 @@
 package com.example.appdz;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "table_users")
 public class User {
-    private int  userId;
+
+    @PrimaryKey(autoGenerate = true)
+    private int  id;
     private String userName;
     private String userSurname;
 
     public int getUserId() {
-        return userId;
+        return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserId(int id) {
+        this.id = id;
     }
 
     public String getUserName() {
@@ -42,7 +48,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "userId=" + id +
                 ", userName='" + userName + '\'' +
                 ", userSurname='" + userSurname + '\'' +
                 ", age=" + age +
