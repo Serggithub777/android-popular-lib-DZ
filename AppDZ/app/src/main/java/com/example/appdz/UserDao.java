@@ -16,15 +16,15 @@ interface UserDao {
     Single<List<User>> getUserById(int id);
 
     @Insert
-    Single<Long> insert(User fruit);
+    Single<Long> insert(User user);
 
     @Insert
     Single<List<Long>> insertList(List<User> users);
 
     @Delete
-    Single<Integer> delete(User user);
+    Single<Integer> deleteUser(User user);
 
     @Update
-    Single<Integer> update(User user);
+    Single<Integer> updateUser(User user);
 
 }

@@ -3,6 +3,9 @@ package com.example.appdz;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import io.reactivex.Completable;
+import io.reactivex.Scheduler;
+
 @Entity(tableName = "table_users")
 public class User {
 
@@ -10,12 +13,22 @@ public class User {
     private int  id;
     private String userName;
     private String userSurname;
+    private int age;
 
-    public int getUserId() {
-        return id;
+
+
+    public User(String userName, String userSurname, int age) {
+        this.userName = userName;
+        this.userSurname = userSurname;
+        this.age = age;
     }
 
-    public void setUserId(int id) {
+
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -43,8 +56,6 @@ public class User {
         this.age = age;
     }
 
-    private int age;
-
     @Override
     public String toString() {
         return "User{" +
@@ -54,4 +65,6 @@ public class User {
                 ", age=" + age +
                 '}';
     }
+
+
 }

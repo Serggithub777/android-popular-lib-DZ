@@ -1,13 +1,13 @@
 package com.example.appdz;
 
-import android.app.Application;
 
+import android.app.Application;
 import androidx.room.Room;
-import androidx.room.RoomDatabase;
 
 public class App extends Application {
-private static AppDatabase appDatabase;
 
+    private static AppDatabase appDatabase;
+    public static final String TAG = "Application";
     @Override
     public void onCreate() {
         super.onCreate();
