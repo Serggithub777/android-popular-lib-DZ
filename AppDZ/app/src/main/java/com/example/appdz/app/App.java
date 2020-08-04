@@ -3,7 +3,8 @@ package com.example.appdz.app;
 import android.app.Application;
 
 public class App extends Application {
-       private static AppComponent appComponent;
+
+    private static AppComponent appComponent;
 
     @Override
     public void onCreate() {
@@ -15,7 +16,10 @@ public class App extends Application {
         return appComponent;
     }
 
-    private AppComponent generateAppComponent() {
-        return
+    public AppComponent generateAppComponent() {
+           return DaggerAppComponent
+                   .builder()
+                   .appModule(new AppModule(this))
+                   .build();
     }
 }
