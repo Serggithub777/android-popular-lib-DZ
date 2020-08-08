@@ -13,14 +13,17 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import moxy.InjectViewState;
 import moxy.MvpPresenter;
+import retrofit2.Retrofit;
 
 @InjectViewState
 public class RetrofitPresenter extends MvpPresenter<RetrofitView> {
 
     private static final String TAG = "RetrofitPresenter";
-
-    @Inject
     RetrofitApi retrofitApi;
+
+    public RetrofitPresenter() {
+        retrofitApi = new RetrofitApi();
+    }
 
     public void getString() {
         Disposable disposable = getUserObservable().observeOn(AndroidSchedulers.mainThread()).subscribe(user -> {
