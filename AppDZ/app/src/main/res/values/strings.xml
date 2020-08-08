@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">AppDZ</string>
+    <string name="text_view_picture_url">Picture URL</string>
+    <string name="buttonGetPicture">get picture</string>
+    <string name="avatar_picture">Avatar picture</string>
 </resources>
