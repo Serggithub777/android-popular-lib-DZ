@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppDZ</string>
+    <string name="button_request">request</string>
 </resources>
